@@ -3,28 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<!--
-KKNT DUTA BBANGSA
--->
         <title>Desa Wonosegoro</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+    
+        <!-- Font styles -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
         
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/hero-slider.css">
-        <link rel="stylesheet" href="css/owl-carousel.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
-        <link rel="stylesheet" href="css/lightbox.css">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!-- CSS files -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css"> <!-- Bootstrap Theme CSS -->
+        <link rel="stylesheet" href="css/fontAwesome.css"> <!-- FontAwesome Icons -->
+        <link rel="stylesheet" href="css/hero-slider.css"> <!-- Hero Slider -->
+        <link rel="stylesheet" href="css/owl-carousel.css"> <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/templatemo-style.css"> <!-- Main Style CSS -->
+        <link rel="stylesheet" href="css/lightbox.css"> <!-- Lightbox CSS -->
     </head>
+    
 
 <body>
     <div class="header">
@@ -69,6 +65,12 @@ KKNT DUTA BBANGSA
             </div>
         </div>
     </div>
+
+    <section id="struktur">
+        <div class="image-container">
+            <img src="img/struktur.png" alt="Struktur">
+        </div>
+    </section>
 
     <section id="visi">
         <div class="center-text">
@@ -209,7 +211,7 @@ KKNT DUTA BBANGSA
                             <p></p>
                             <div class="filter-categories">
                                 <ul class="project-filter">
-                                    <li class="filter" data-filter="all"><span>Tampilkan semua</span></li>
+                                    <li class="filter" data-filter="all"><span>Tampilkan Semua</span></li>
                                     <li class="filter" data-filter="bangunan"><span>Bangunan Desa</span></li>
                                     <li class="filter" data-filter="nature"><span>Lanskap</span></li>
                                 </ul>
@@ -217,59 +219,38 @@ KKNT DUTA BBANGSA
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="projects-holder-3">
-                            <div class="projects-holder">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 project-item mix nature">
-                                      <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/lanskap1.png" data-lightbox="image-1"><img src="img/lanskap1.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix bangunan">
-                                      <div class="thumb">
-                                        <div class="image">
-                                                <a href="img/tempat2.png" data-lightbox="image-1"><img src="img/tempat2.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix nature">
-                                      <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/lanskap3.png" data-lightbox="image-1"><img src="img/lanskap3.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix bangunan">
-                                      <div class="thumb">
-                                        <div class="image">
-                                                <a href="img/Tempat1.png" data-lightbox="image-1"><img src="img/Tempat1.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix nature">
-                                      <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/lanskap2.png" data-lightbox="image-1"><img src="img/lanskap2.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix bangunan">
-                                      <div class="thumb">
-                                        <div class="image">
-                                                <a href="img/tempat3.png" data-lightbox="image-1"><img src="img/tempat3.png"></a>
-                                            </div>
-                                      </div>
-                                    </div>
+                        <div class="projects-holder">
+                            <div class="portfolio-wrapper">
+                                <!-- Tambahkan atribut `data-lightbox` dan `data-title` -->
+                                <div class="project-item mix nature">
+                                    <a href="img/lanskap1.png" data-lightbox="galeri-desa" data-title="Lanskap 1">
+                                        <img src="img/lanskap1.png" alt="Lanskap 1">
+                                    </a>
                                 </div>
+                                <div class="project-item mix nature">
+                                    <a href="img/lanskap3.png" data-lightbox="galeri-desa" data-title="Lanskap 3">
+                                        <img src="img/lanskap3.png" alt="Lanskap 3">
+                                    </a>
+                                </div>
+                                <div class="project-item mix bangunan">
+                                    <a href="img/tempat2.png" data-lightbox="galeri-desa" data-title="Bangunan 2">
+                                        <img src="img/tempat2.png" alt="Bangunan 2">
+                                    </a>
+                                </div>
+                                <div class="project-item mix nature">
+                                    <a href="img/lanskap2.png" data-lightbox="galeri-desa" data-title="Lanskap 2">
+                                        <img src="img/lanskap2.png" alt="Lanskap 2">
+                                    </a>
+                                </div>
+                                <!-- Tambahkan gambar lainnya -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
+    
 
 
     
@@ -283,34 +264,31 @@ KKNT DUTA BBANGSA
                             <h4>Lain-lain</h4>
                             <div class="line-dec"></div>
                             <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                                <li><a href="#tab1" class="active">Perpustakaan Digital</a></li>
-                                <!--
-                                <li><a href="#tab2">Quisque ultricies maximus</a></li>
-                                <li><a href="#tab3">Sed vel elit et lorem</a></li>
-                                <li><a href="#tab4">Vivamus purus neque</a></li>
-                                -->
+                                <li><a href="#tab1" class="active">Profil Desa</a></li>
+                                <li><a href="#tab2">Perpustakaan Digital</a></li>
+                                <!-- <li><a href="#tab3">Sed vel elit et lorem</a></li>
+                                <li><a href="#tab4">Vivamus purus neque</a></li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <section id="first-tab-group" class="tabgroup">
                             <div id="tab1">
+                                <img src="img/profil.png" alt="">
+                                <div class="text-content">
+                                    <h4>Profil Desa Wonosegoro</h4>
+                                    <span></u><a href="https://heyzine.com/flip-book/f3e44c92e1.html"><u>Yuk ulik lebih lanjut tentang Wonosegoro</u></a></span>
+                                    <p>Di dalam flipbook ini kalian bisa mengetahui lebih dalam tentang desa Wonosegoro loh!! Yuk baca dengan klik link diatas!</p>
+                                </div>
+                            </div>
+                            <div id="tab2">
                                 <img src="img/perpus.png" alt="">
                                 <div class="text-content">
                                     <h4>Perpustakaan Digital Boyolali</h4>
-                                    <span><a href="https://remenmaos.boyolali.go.id/">Yuk mulai membaca disini!</a>
+                                    <span><a href="https://remenmaos.boyolali.go.id/"><u>Yuk mulai membaca disini!</u></a>
                                     <p>Perpustakaan Digital Boyolali memudahkan akses pengetahuan dengan ribuan koleksi buku, artikel, dan materi edukatif yang bisa diakses kapan saja dan di mana saja. Ideal untuk siswa, mahasiswa, dan masyarakat umum, perpustakaan ini mendukung pembelajaran dan pengembangan diri. Cukup dengan perangkat dan koneksi internet, Anda dapat menjelajahi dunia pengetahuan tanpa batas.</p>
                                 </div>
-                            </div>
-                            <!--
-                            <div id="tab2">
-                                <img src="img/blog_item_02.jpg" alt="">
-                                <div class="text-content">
-                                    <h4>Quisque ultricies maximus</h4>
-                                    <span><a href="#">Branding</a> / <a href="#">David</a> / <a href="#">24 August 2020</a></span>
-                                    <p>Etiam fringilla posuere pretium. Maecenas tempor pellentesque elit in dapibus. Curabitur viverra urna sem, ut sollicitudin sem congue vel. Donec fringilla augue in justo molestie fermentum quis ac mi.</p>
-                                </div>
-                            </div>
+                            </div>   
                             <div id="tab3">
                                 <img src="img/blog_item_03.jpg" alt="">
                                 <div class="text-content">
@@ -326,8 +304,7 @@ KKNT DUTA BBANGSA
                                     <span><a href="#">E-Commerce</a> / <a href="#">George</a> / <a href="#">14 July 2020</a></span>
                                     <p>Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
                                 </div>
-                            </div>
-                            -->
+                            </div>  
                         </section>
                     </div>
                 </div>
@@ -403,17 +380,40 @@ KKNT DUTA BBANGSA
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <!-- Pustaka JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <script src="js/plugins.js"></script> <!-- Plugins JS -->
+    <script src="js/main.js"></script> <!-- Main custom JS -->
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <!-- Filter & Portfolio JS -->
+    
     <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function(){
+        $('.project-filter li').click(function () {
+            var filter = $(this).data('filter'); // Ambil kategori filter yang dipilih
+    
+            // Hapus kelas 'active' dari semua kategori
+            $('.project-filter li').removeClass('active');
+    
+            // Tambahkan kelas 'active' pada kategori yang diklik
+            $(this).addClass('active');
+    
+            // Sembunyikan semua project-item
+            $('.project-item').hide();
+    
+            // Tampilkan item yang sesuai dengan filter
+            if (filter === 'all') {
+                $('.project-item').show(); // Tampilkan semua item
+            } else {
+                $('.project-item').each(function () {
+                    if ($(this).hasClass(filter)) {
+                        $(this).show(); // Tampilkan item kategori tertentu
+                    }
+                });
+            }
+        });
         // navigation click actions 
         $('.scroll-link').on('click', function(event){
             event.preventDefault();
@@ -442,11 +442,7 @@ KKNT DUTA BBANGSA
             mainNav.removeClass("open");
         }
     }
-    if (typeof console === "undefined") {
-        console = {
-            log: function() { }
-        };
-    }
+    
     </script>
 </body>
 </html>
