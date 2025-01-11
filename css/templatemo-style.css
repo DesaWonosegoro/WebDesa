@@ -167,7 +167,7 @@ p {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #f7c552;
 }
-bootstrap.min.css:5
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -311,7 +311,7 @@ bootstrap.min.css:5
 	padding: 30px 15px 0px 15px;
 }
 
-.filter-categories {;
+.filter-categories {
   margin-top: 60px;
 }
 
@@ -333,6 +333,61 @@ bootstrap.min.css:5
 .filter-categories ul li.active span {
   color: #f7c552;
 }
+/* Media Query untuk desktop */
+@media (min-width: 1024px) {
+    .portfolio-wrapper {
+        justify-content: flex-start; /* Agar gambar diatur dengan rapat pada desktop */
+    }
+
+    .project-item {
+        width: 900px; /* Ukuran gambar lebih besar pada desktop */
+        height: 500px; /* Menambah tinggi gambar pada desktop */
+		background: lightblue; /* Debug: Warna untuk desktop */
+    }
+}
+/* Media Query untuk mobile */
+@media (max-width: 1024px) {
+    .portfolio-wrapper {
+        justify-content: flex-start;
+        gap: 15px; /* Jarak antar gambar lebih kecil untuk mobile */
+    }
+
+    .project-item {
+        width: 200px; /* Mengurangi lebar gambar pada perangkat mobile */
+        height: 110px; /* Mengurangi tinggi gambar pada perangkat mobile */
+		background: rgb(0, 0, 0); /* Debug: Warna untuk desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-wrapper {
+        gap: 10px; /* Lebih rapat untuk ponsel */
+    }
+
+    .project-item {
+        width: 150px; /* Mengurangi lebar gambar untuk layar ponsel */
+        height: 150px; /* Menurunkan tinggi gambar pada ponsel */
+    }
+}
+
+
+#portfolio {
+    padding: 0px 0;
+    overflow-x: auto; /* Membuat section scrollable secara horizontal */
+    white-space: nowrap; /* Menghindari gambar untuk melompat ke baris berikutnya */
+	background-color: #ffffff;	
+}
+#portfolio .projects-holder .mix {
+	display: none; /* Secara default gambar tidak ditampilkan */
+  }
+#portfolio .portfolio-wrapper {
+    display: flex; /* Menggunakan Flexbox untuk menyusun gambar secara horizontal */
+    flex-wrap: nowrap; /* Mencegah elemen melompat ke baris berikutnya */
+    gap: 20px; /* Menambahkan jarak antar gambar */
+    overflow-x: auto; /* Menambahkan scrollbar horizontal */
+    scroll-behavior: smooth; /* Animasi scroll yang halus */
+    padding-bottom: 10px; /* Memberi sedikit ruang di bawah scrollbar */
+}
 
 #portoflio .page-section {
 	padding: 0px;
@@ -348,9 +403,66 @@ bootstrap.min.css:5
 }
 
 #portfolio .project-item {
-	margin: 0px -16px;
+    flex: 0 0 auto; /* Memastikan setiap elemen memiliki ukuran tetap */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang meluber */
 }
 
+.project-item img {
+    width: 100%; /* Gambar memenuhi container sepenuhnya */
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsi gambar */
+    transition: transform 1s ease; /* Efek hover */
+}
+
+#portfolio .project-item.hide {
+	display: none; /* Sembunyikan elemen jika memiliki kelas 'hide' */
+    opacity: 0;
+    pointer-events: none; /* Tidak mengganggu klik */
+}
+
+#portfolio .project-item.show {
+    display: block; /* Tampilkan elemen jika memiliki kelas 'show' */
+    opacity: 1;
+}
+
+
+#portfolio .project-item:hover img {
+    transform: scale(1.1); /* Zoom gambar sedikit saat hover */
+}
+
+#portfolio .filter-categories {
+    margin-bottom: 20px;
+    display: block;
+}
+
+#portfolio .project-filter {
+    list-style: none;
+    padding: 0;
+    display: block; /* Menampilkan filter dalam bentuk list vertikal */
+}
+
+#portfolio .project-filter li {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Warna teks default */
+    transition: color 0.3s ease;
+}
+
+#portfolio .project-filter li:hover {
+    color: #ffc400; /* Menambahkan efek hover */
+}	
+
+#portfolio .project-filter li span {
+    color: #ffffff;
+}
+.project-filter li.active {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Warna teks default */
+    transition: color 0.3s ease; /* Efek transisi */
+}
 #portfolio .section-heading h4 {
 	margin-top: 0px;
 	font-size: 20px;
@@ -358,6 +470,16 @@ bootstrap.min.css:5
 	font-weight: 700;
 	color: #fff;
 	letter-spacing: 1px;
+}
+
+#portfolio .project-filter li:hover span {
+    color: #ffc400; /* Change color on hover */
+	transition: color 0.5s ease;
+}
+
+.project-filter li.active span {
+    color: #ffc400 !important; /* Warna khusus untuk kategori aktif */
+    text-decoration: underline; /* Opsional: Beri garis bawah untuk penekanan */
 }
 
 #portfolio .section-heading .line-dec {
@@ -377,7 +499,7 @@ bootstrap.min.css:5
 	background: linear-gradient(to top, #33c1cf, #000d53);
 
 	text-align: center;
-	padding: 100px 0px;
+	padding: 10px 0px;
 }
 
 #testimonial .testimonials-item h4 {
@@ -428,7 +550,7 @@ bootstrap.min.css:5
 
 
 #blog {
-	background-image: url(../img/blog-bg.jpg);
+	background-image: url(../img/tempat2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -949,7 +1071,7 @@ footer .connect-us ul li a:hover {
     background-image: url(../img/biru.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment:fixed;
 }
 
 #visi .container {
@@ -1020,3 +1142,38 @@ footer .connect-us ul li a:hover {
     color: rgb(255, 255, 255);
     
 }
+
+/* Sesuaikan warna latar belakang Lightbox */
+.lightboxOverlay {
+    background-color: rgba(255, 0, 0, 0.8); /* Transparansi hitam */
+}
+
+#struktur {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background:fixed;
+	background-image: url(../img/desab.jpg);
+	background-size: cover; /* Agar gambar selalu mengisi seluruh area tanpa ter-zoom */
+    background-position: center; /* Menjaga posisi gambar agar tetap terpusat */
+    background-repeat: no-repeat; /* Mencegah gambar terulang */
+}
+
+.image-container {
+	padding: 10px;
+	background-color: #fff;
+	border: 4px solid #000;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	width: 80%;  /* Mengatur lebar kontainer menjadi responsif */
+	max-width: 900px;  /* Membatasi lebar maksimum */
+}
+
+.image-container img {
+	display: block;
+	width: 100%;  /* Membuat gambar responsif */
+	height: auto;  /* Menjaga proporsi gambar */
+	border-radius: 5px;
+}
+
